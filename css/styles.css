@@ -1,0 +1,180 @@
+/* Settaggi Globali */
+
+* {                                 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgba(222,234,254,255);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Questo media screen gestisce il contatore per il formato "mobile" */
+
+@media screen and (max-width:575px) {
+
+    .container {
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-rows: 1fr, 1fr;
+            row-gap: 3rem;
+            justify-items: center;
+            align-items: center;
+        }
+
+    .minButton, .addButton, .resetButton {
+           background-color: transparent;
+           font-size: 3rem;
+           color:  rgb(65, 105, 225, .60);
+           text-shadow: 0px 0px 15px grey;
+           cursor:pointer;
+           border: none;
+           font-family:'Courier New', Courier, monospace;
+           font-weight: 800;
+        }
+    
+    
+    button:hover {
+        color:  rgb(65, 105, 225);
+    }
+
+    .minButton {
+        grid-column: 1;
+        grid-row: 1;
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .addButton {
+        grid-column: 3;
+        grid-row: 1;
+        width: 3rem;
+        height: 3rem;
+    }
+
+
+    .resetButton {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+
+    .counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2;
+        grid-row: 1;
+        background-color: rgba(58,120,239,255);
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 5px 10px 50px grey;
+    }
+
+    .counterValue {
+        font-size: 5em;
+        color: rgba(222,234,254,255);
+        text-shadow: 5px 5px 20px gray;
+    }
+
+    
+}
+
+/* Questo media screen gestisce il contatore per il formato "desktop" */
+
+@media screen and (min-width:576px) {
+
+/* Ho scelto di utilizzare il css-grid per il mio counter per poter disporre al meglio gli elementi 
+senza compromettere la funzionalità responsive */
+
+.container {
+    display: grid;
+    grid-template-columns: 10vw, 80vw, 10vw;        /* Gli elementi sono disposti in 3 colonne e 2 righe */
+    grid-template-rows: 50vh, 50vh;
+    row-gap: 2rem;
+    column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+    }
+
+
+.addButton, .minButton, .resetButton {
+    margin: 5px;                                    /* Ho aggiunto margini e spazio rispetto alla versione mobile e i pulsanti sono più grandi */
+    padding: 10px;
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 800;
+    text-shadow: 0px 0px 15px grey;
+    background-color: transparent;
+    color:  rgb(65, 105, 225, .60);
+    cursor:pointer;
+    border: none;
+    
+    }
+
+
+    button:hover {
+    color:  rgb(65, 105, 225);
+    }
+
+
+.minButton {
+    grid-column: 1;
+    grid-row: 1;
+    }   
+
+.addButton {
+    grid-column: 3;
+    grid-row: 1;
+    }
+
+
+.resetButton {
+    grid-column: 2;
+    grid-row: 2;
+    }
+}
+
+.counter {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 15em;
+    order: 2;
+    background-color: rgba(58,120,239,255);
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 5px 10px 50px grey;
+}
+
+
+.counterValue {
+    font-size: 10em;
+    color: rgba(222,234,254,255);
+    text-shadow: 5px 5px 20px gray;
+}
+
+.counterValue.animate {
+    animation: scaleUp 0.3s ease-in-out;        
+}
+
+/* Ho inserito un leggero zoom al valore del counter ogni volta che cambia */
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
