@@ -17,7 +17,13 @@
 ## Struttura del progetto
 
 Il counter è uno strumento che si presenta in un formato minimalista, utile per contare su e giù o per calcolare un numero. A differenza di un contatore automatico, questo è manuale e il valore viene impostato dall'utente stesso.
-E' stato realizzato dinamicamente con Javascript, dunque tutti i suoi elementi sono stati creati all'interno del DOM. 
+E' stato realizzato dinamicamente con Javascript.
+
+- Creazione degli elementi del counter tramite manipolazione del DOM
+- Interazione dinamica con i pulsanti anche tramite tastiera (+, -, r)
+- Tasto reset che permette l'azzeramento immediato del contatore
+- Istruzione che evita il valore negativo
+- Animazione che si avvia ogni qualvolta il valore cambia
 
 ## Come trovarla
 
