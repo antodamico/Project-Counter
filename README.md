@@ -36,7 +36,7 @@ I seguenti aggionrnamenti sono stati apportati dietro consiglio del tutor Giacom
 - Implementazione di un unico "Event Listener" (riga 62 a 72) per la gestione dei pulsanti attraverso l'Event Delegation su un div wrapper. In questo modo il codice è in grado di 'ascoltare' e gestire diversi eventi e, in base a quello scelto dall'utente, agire di conseguenza.
 ![Screenshot (80)](https://github.com/user-attachments/assets/8aa96bd2-700e-4b0d-a800-10eac888f1c9)
 
--creazione della directory "assets" dove inserire le cartelle relative al progetto (css,js,img)
+- creazione della directory "assets" dove inserire le cartelle relative al progetto (css,js,img)
 
 ## Come trovarla
 
