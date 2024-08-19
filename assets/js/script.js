@@ -71,9 +71,8 @@ container.addEventListener('click', function(event) {
    }
 });
 
- /* Ho voluto implentare anche degli eventi che gestiscano l'input dei tre pulsanti anche tramite tastiera. 
+ /* Ho voluto implementare anche degli eventi che gestiscano l'input dei tre pulsanti anche tramite tastiera. 
     "+" e "-" - per gli operatori, "r" per il reset */
-
 
 container.addEventListener('keydown', function(event) {
    
